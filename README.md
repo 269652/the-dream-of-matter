@@ -15,7 +15,7 @@ Dieses Projekt begleitet die erzählerische Entwicklung eines philosophisch-fikt
 * [Kapitel 3](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-3-ub015sm49h2axzpp5u3wiufa?ui=1)
 * [Kapitel 4](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-4-ak1df1fzqenjav9xy51ab3iv?ui=1)
 * [Kapitel 5](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-5-ayaqi18ibwq6o0swavrqfdpd?ui=1)
-
+* [Kapitel 6](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-6-brdbuicuhgkwwoeqfls50a93?ui=1)
 
 ⚠️ **Hinweis:**  
 Dies ist ein offener Entwurfszustand. Das Projekt befindet sich in fortlaufender Entwicklung und kann sich jederzeit strukturell oder inhaltlich ändern.
