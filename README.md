@@ -10,12 +10,12 @@ Dieses Projekt begleitet die erzählerische Entwicklung eines philosophisch-fikt
 [**RSS Feed**](https://javascript.moe/de/blog/labels/the-dream-of-matter/rss.xml)  
   
 
-* [Kapitel 1](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-1-wlyde9fj160q5nut7dda2p9f?ui=1)
-* [Kapitel 2](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-2-cs1yywtk4dz9gzbw5tt1z97l?ui=1)
-* [Kapitel 3](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-3-ub015sm49h2axzpp5u3wiufa?ui=1)
-* [Kapitel 4](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-4-ak1df1fzqenjav9xy51ab3iv?ui=1)
-* [Kapitel 5](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-5-ayaqi18ibwq6o0swavrqfdpd?ui=1)
-* [Kapitel 6](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-6-brdbuicuhgkwwoeqfls50a93?ui=1)
+* [Kapitel 1](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-1-wlyde9fj160q5nut7dda2p9f?ui=0) | [Chapter 1](https://javascript.moe/en/blog/the-dream-of-matter-from-zero-forever-kapitel-1-wlyde9fj160q5nut7dda2p9f?ui=0)
+* [Kapitel 2](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-2-cs1yywtk4dz9gzbw5tt1z97l?ui=0)
+* [Kapitel 3](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-3-ub015sm49h2axzpp5u3wiufa?ui=0)
+* [Kapitel 4](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-4-ak1df1fzqenjav9xy51ab3iv?ui=0)
+* [Kapitel 5](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-5-ayaqi18ibwq6o0swavrqfdpd?ui=0)
+* [Kapitel 6](https://javascript.moe/de/blog/the-dream-of-matter-from-zero-forever-kapitel-6-brdbuicuhgkwwoeqfls50a93?ui=0)
 
 ⚠️ **Hinweis:**  
 Dies ist ein offener Entwurfszustand. Das Projekt befindet sich in fortlaufender Entwicklung und kann sich jederzeit strukturell oder inhaltlich ändern.
