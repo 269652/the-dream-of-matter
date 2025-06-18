@@ -1,35 +1,43 @@
 const fs = require('fs');
 const path = require('path');
 
-const inputFile = 'The Dream of Matter.draft.md';
-const outputDir = './chapters';
+const langs = ['de', 'en', 'es'];
+const originalLang = 'de';
 
-if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir);
-}
+langs.forEach((lang) => {
+    const inputFile = `The Dream of Matter${lang === originalLang ? '' : `.${lang}`}.draft.md`;
+    const outputDir = `./${lang}/chapters`;
 
-const content = fs.readFileSync(inputFile, 'utf8');
+    if (!fs.existsSync(inputFile)) return;
+    
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
 
-// Regex to find "Kapitel 1: Title" style headers
-const chapterRegex = /#\s(Kapitel\s\d.*?)\n/g;
+    const content = fs.readFileSync(inputFile, 'utf8');
 
-const matches = [...content.matchAll(chapterRegex)];
+    // Regex to find "Kapitel 1: Title" style headers
+    const chapterRegex = /#\s(Kapitel\s\d.*?)\n/g;
 
-if (matches.length === 0) {
-    console.error('No chapters found using the pattern "Kapitel X: Title".');
-    process.exit(1);
-}
+    const matches = [...content.matchAll(chapterRegex)];
 
-for (let i = 0; i < matches.length; i++) {
-    const startIndex = matches[i].index;
-    const endIndex = i + 1 < matches.length ? matches[i + 1].index : content.length;
+    if (matches.length === 0) {
+        console.error('No chapters found using the pattern "Kapitel X: Title".');
+        process.exit(1);
+    }
 
-    const chapterContent = content.slice(startIndex, endIndex).trim();
-    const chapterNumberMatch = matches[i][1].match(/Kapitel\s+(\d+)/i);
-    const chapterNumber = chapterNumberMatch ? chapterNumberMatch[1] : (i + 1);
+    for (let i = 0; i < matches.length; i++) {
+        const startIndex = matches[i].index;
+        const endIndex = i + 1 < matches.length ? matches[i + 1].index : content.length;
 
-    const outputFilePath = path.join(outputDir, `chapter${chapterNumber}.md`);
-    fs.writeFileSync(outputFilePath, chapterContent);
+        const chapterContent = content.slice(startIndex, endIndex).trim();
+        const chapterNumberMatch = matches[i][1].match(/Kapitel\s+(\d+)/i);
+        const chapterNumber = chapterNumberMatch ? chapterNumberMatch[1] : (i + 1);
 
-    console.log(`✅ Wrote ${outputFilePath}`);
-}
+        const outputFilePath = path.join(outputDir, `chapter${chapterNumber}.md`);
+        fs.writeFileSync(outputFilePath, chapterContent);
+
+        console.log(`✅ Wrote ${outputFilePath}`);
+    }
+
+})
