@@ -9,7 +9,7 @@ langs.forEach((lang) => {
     const outputDir = `./${lang}/chapters`;
 
     if (!fs.existsSync(inputFile)) return;
-    
+
     if (!fs.existsSync(outputDir)) {
         fs.mkdirSync(outputDir, { recursive: true });
     }
@@ -17,7 +17,7 @@ langs.forEach((lang) => {
     const content = fs.readFileSync(inputFile, 'utf8');
 
     // Regex to find "Kapitel 1: Title" style headers
-    const chapterRegex = /#\s(Kapitel\s\d.*?)\n/g;
+    const chapterRegex = /#\s((Kapitel|Chapter)\s\d*.*?)\n/g;
 
     const matches = [...content.matchAll(chapterRegex)];
 
@@ -31,10 +31,11 @@ langs.forEach((lang) => {
         const endIndex = i + 1 < matches.length ? matches[i + 1].index : content.length;
 
         const chapterContent = content.slice(startIndex, endIndex).trim();
-        const chapterNumberMatch = matches[i][1].match(/Kapitel\s+(\d+)/i);
-        const chapterNumber = chapterNumberMatch ? chapterNumberMatch[1] : (i + 1);
+        const chapterNumberMatch = matches[i][1].match(/(Kapitel|Chapter)\s+(\d+)/i);
+        const chapterNumber = chapterNumberMatch ? chapterNumberMatch[2] : (i + 1);
+        const chapterNumberPadded = chapterNumber.toString().padStart(2, '0');
 
-        const outputFilePath = path.join(outputDir, `chapter${chapterNumber}.md`);
+        const outputFilePath = path.join(outputDir, `chapter${chapterNumberPadded}.md`);
         fs.writeFileSync(outputFilePath, chapterContent);
 
         console.log(`✅ Wrote ${outputFilePath}`);
